@@ -1,6 +1,6 @@
 /* =========================================================
    HOUSE OF PRAVAHA
-   Main Website Styles
+   Complete Website Stylesheet
    ========================================================= */
 
 
@@ -58,21 +58,27 @@ html {
 
 body {
     font-family: 'Montserrat', sans-serif;
+
     background: var(--cream);
+
     color: var(--text);
+
     line-height: 1.7;
+
     overflow-x: hidden;
 }
 
 
 img {
     max-width: 100%;
+
     display: block;
 }
 
 
 a {
     text-decoration: none;
+
     color: inherit;
 }
 
@@ -88,6 +94,7 @@ button {
 
 .announcement {
     background: var(--green);
+
     color: var(--white);
 
     text-align: center;
@@ -95,6 +102,7 @@ button {
     padding: 10px 15px;
 
     font-size: 12px;
+
     font-weight: 400;
 
     letter-spacing: 1.5px;
@@ -107,12 +115,15 @@ button {
 
 .navbar {
     position: sticky;
+
     top: 0;
 
     z-index: 1000;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 30px;
@@ -133,7 +144,9 @@ button {
     flex-shrink: 0;
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     color: var(--green);
@@ -169,12 +182,13 @@ button {
 }
 
 
-/* Navigation links */
+/* Navigation */
 
 .navbar nav {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     gap: 28px;
@@ -196,8 +210,7 @@ button {
 
     white-space: nowrap;
 
-    transition:
-        color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 
@@ -207,15 +220,16 @@ button {
     position: absolute;
 
     left: 0;
+
     bottom: -7px;
 
     width: 0;
+
     height: 1px;
 
     background: var(--gold);
 
-    transition:
-        width 0.3s ease;
+    transition: width 0.3s ease;
 }
 
 
@@ -229,7 +243,7 @@ button {
 }
 
 
-/* WhatsApp navigation button */
+/* Navigation WhatsApp */
 
 .nav-whatsapp {
     flex-shrink: 0;
@@ -237,6 +251,7 @@ button {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 13px 22px;
@@ -272,7 +287,7 @@ button {
 
 
 /* =========================================================
-   HERO SECTION
+   HERO
    ========================================================= */
 
 .hero {
@@ -299,8 +314,6 @@ button {
         var(--cream);
 }
 
-
-/* Hero text */
 
 .hero-content {
     width: 100%;
@@ -372,8 +385,6 @@ button {
 }
 
 
-/* Hero buttons */
-
 .hero-buttons {
     display: flex;
 
@@ -385,10 +396,15 @@ button {
 }
 
 
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
 .button {
     display: inline-flex;
 
     align-items: center;
+
     justify-content: center;
 
     min-height: 48px;
@@ -421,8 +437,6 @@ button {
 }
 
 
-/* Primary button */
-
 .button.primary {
     background: var(--green);
 
@@ -442,8 +456,6 @@ button {
 }
 
 
-/* Secondary button */
-
 .button.secondary {
     background: transparent;
 
@@ -460,7 +472,9 @@ button {
 }
 
 
-/* Hero image */
+/* =========================================================
+   HERO IMAGE
+   ========================================================= */
 
 .hero-image {
     position: relative;
@@ -472,10 +486,6 @@ button {
     overflow: hidden;
 
     background:
-        linear-gradient(
-            rgba(23, 63, 53, 0.04),
-            rgba(23, 63, 53, 0.04)
-        ),
         url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1200&q=85')
         center / cover
         no-repeat;
@@ -496,12 +506,6 @@ button {
     pointer-events: none;
 }
 
-
-/*
-   The image-placeholder is intentionally empty.
-   The actual hero photograph is supplied by
-   the background image on .hero-image.
-*/
 
 .image-placeholder {
     position: absolute;
@@ -549,6 +553,7 @@ button {
     max-width: 650px;
 
     margin-left: auto;
+
     margin-right: auto;
 
     color: var(--text-light);
@@ -560,15 +565,20 @@ button {
 
 
 /* =========================================================
-   COLLECTIONS SECTION
+   COLLECTIONS
    ========================================================= */
 
 .collections {
-    padding: 100px 7%;
+    padding: 90px 7%;
 
     background: var(--white);
 }
 
+
+/*
+   Four compact cards on desktop,
+   matching the reference video.
+*/
 
 .collection-grid {
     display: grid;
@@ -576,9 +586,15 @@ button {
     grid-template-columns:
         repeat(4, minmax(0, 1fr));
 
-    gap: 22px;
+    gap: 20px;
+
+    max-width: 1120px;
+
+    margin: 0 auto;
 }
 
+
+/* Collection card */
 
 .collection-card {
     position: relative;
@@ -591,7 +607,8 @@ button {
 
     border: 1px solid rgba(23, 63, 53, 0.08);
 
-    box-shadow: var(--shadow-light);
+    box-shadow:
+        0 6px 20px rgba(23, 63, 53, 0.07);
 
     transition:
         transform 0.3s ease,
@@ -600,25 +617,26 @@ button {
 
 
 .collection-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 
     box-shadow: var(--shadow);
 }
 
 
-/* Collection image */
+/* Collection image area */
 
 .collection-image {
     position: relative;
 
-    height: 340px;
+    height: 285px;
 
     display: flex;
 
     align-items: flex-end;
+
     justify-content: center;
 
-    padding: 24px;
+    padding: 22px;
 
     overflow: hidden;
 
@@ -629,6 +647,8 @@ button {
     isolation: isolate;
 }
 
+
+/* Dark overlay */
 
 .collection-image::before {
     content: '';
@@ -642,11 +662,13 @@ button {
     background:
         linear-gradient(
             to top,
-            rgba(0, 0, 0, 0.58),
-            rgba(0, 0, 0, 0.05) 65%
+            rgba(0, 0, 0, 0.62),
+            rgba(0, 0, 0, 0.05) 70%
         );
 }
 
+
+/* Collection title inside image */
 
 .collection-image span {
     position: relative;
@@ -657,16 +679,26 @@ button {
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 30px;
+    font-size: 28px;
 
     font-weight: 500;
 
+    line-height: 1.1;
+
     text-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.25);
+        0 2px 8px rgba(0, 0, 0, 0.30);
 }
 
 
-/* Collection images */
+/* =========================================================
+   COLLECTION IMAGES
+   ========================================================= */
+
+/*
+   Silk:
+   Real temporary image until the actual catalogue
+   photography is supplied.
+*/
 
 .collection-image.silk {
     background-image:
@@ -674,17 +706,61 @@ button {
 }
 
 
+/*
+   Cotton:
+   Temporary clean placeholder.
+*/
+
 .collection-image.cotton {
-    background-image:
-        url('https://images.unsplash.com/photo-1583391733956-6c78276477e2?auto=format&fit=crop&w=900&q=85');
+    background:
+        linear-gradient(
+            145deg,
+            #f3efe7,
+            #ded8cc
+        );
 }
 
+
+.collection-image.cotton::before {
+    background:
+        linear-gradient(
+            to top,
+            rgba(45, 42, 38, 0.35),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+
+/*
+   Festive:
+   Temporary clean placeholder.
+*/
 
 .collection-image.festive {
-    background-image:
-        url('https://images.unsplash.com/photo-1610189022879-7b4a8d3b4a5a?auto=format&fit=crop&w=900&q=85');
+    background:
+        linear-gradient(
+            145deg,
+            #eee9df,
+            #d8d1c4
+        );
 }
 
+
+.collection-image.festive::before {
+    background:
+        linear-gradient(
+            to top,
+            rgba(45, 42, 38, 0.35),
+            rgba(255, 255, 255, 0.02)
+        );
+}
+
+
+/*
+   Designer:
+   Real temporary image until actual catalogue
+   photography is supplied.
+*/
 
 .collection-image.designer {
     background-image:
@@ -692,43 +768,41 @@ button {
 }
 
 
-/* Collection text */
+/* Text under image */
 
 .collection-card h3 {
-    margin-top: 18px;
+    margin-top: 15px;
 
     color: var(--green);
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 27px;
+    font-size: 26px;
 
     font-weight: 600;
+
+    line-height: 1.1;
 }
 
 
 .collection-card > p {
-    padding: 0 15px 20px;
+    padding: 5px 15px 17px;
 
     color: var(--text-light);
 
-    font-size: 11px;
+    font-size: 9px;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.4px;
 
     text-transform: uppercase;
 }
 
 
 /* =========================================================
-   FEATURED / COMING SOON SECTION
+   FEATURED / COMING SOON
    ========================================================= */
 
 .featured {
-    padding: 100px 7%;
-
-    background: var(--cream);
-
     min-height: 430px;
 
     display: flex;
@@ -736,6 +810,10 @@ button {
     align-items: center;
 
     justify-content: center;
+
+    padding: 90px 7%;
+
+    background: var(--cream);
 }
 
 
@@ -761,7 +839,7 @@ button {
 
 
 /* =========================================================
-   ABOUT SECTION
+   ABOUT
    ========================================================= */
 
 .about {
@@ -835,11 +913,11 @@ button {
 
 
 /* =========================================================
-   WHY US SECTION
+   WHY PRAVAHA
    ========================================================= */
 
 .why-us {
-    padding: 100px 7%;
+    padding: 90px 7%;
 
     background: var(--white);
 }
@@ -851,16 +929,16 @@ button {
     grid-template-columns:
         repeat(3, minmax(0, 1fr));
 
-    gap: 24px;
+    gap: 20px;
 
-    max-width: 1100px;
+    max-width: 1000px;
 
     margin: 0 auto;
 }
 
 
 .trust-card {
-    padding: 38px 28px;
+    padding: 35px 28px;
 
     text-align: center;
 
@@ -919,7 +997,7 @@ button {
    ========================================================= */
 
 .whatsapp-section {
-    padding: 80px 7%;
+    padding: 70px 7%;
 
     display: flex;
 
@@ -929,14 +1007,7 @@ button {
 
     gap: 40px;
 
-    background:
-        linear-gradient(
-            rgba(23, 63, 53, 0.96),
-            rgba(23, 63, 53, 0.96)
-        ),
-        url('https://images.unsplash.com/photo-1583391733981-8498404b0f89?auto=format&fit=crop&w=1400&q=80')
-        center / cover
-        no-repeat;
+    background: var(--green);
 
     color: var(--white);
 }
@@ -1003,7 +1074,7 @@ footer {
 
     color: var(--white);
 
-    padding: 65px 7% 25px;
+    padding: 60px 7% 25px;
 }
 
 
@@ -1069,8 +1140,7 @@ footer {
 
     font-size: 12px;
 
-    transition:
-        color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
 
@@ -1078,8 +1148,6 @@ footer {
     color: var(--gold-light);
 }
 
-
-/* Footer bottom */
 
 .footer-bottom {
     display: flex;
@@ -1109,16 +1177,19 @@ footer {
     position: fixed;
 
     right: 22px;
+
     bottom: 22px;
 
     z-index: 9999;
 
     width: 58px;
+
     height: 58px;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
@@ -1156,6 +1227,7 @@ footer {
 
     .navbar {
         padding-left: 5%;
+
         padding-right: 5%;
     }
 
@@ -1174,6 +1246,7 @@ footer {
         gap: 45px;
 
         padding-left: 6%;
+
         padding-right: 6%;
     }
 
@@ -1186,6 +1259,8 @@ footer {
     .collection-grid {
         grid-template-columns:
             repeat(2, minmax(0, 1fr));
+
+        max-width: 800px;
     }
 
 
@@ -1234,6 +1309,7 @@ footer {
         gap: 45px;
 
         padding-top: 65px;
+
         padding-bottom: 70px;
     }
 
@@ -1249,6 +1325,7 @@ footer {
 
     .hero-text {
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -1274,6 +1351,7 @@ footer {
     .about,
     .why-us {
         padding-top: 80px;
+
         padding-bottom: 80px;
     }
 
@@ -1311,8 +1389,6 @@ footer {
 
 @media (max-width: 650px) {
 
-    /* Announcement */
-
     .announcement {
         padding: 9px 10px;
 
@@ -1321,8 +1397,6 @@ footer {
         letter-spacing: 1px;
     }
 
-
-    /* Navigation */
 
     .navbar {
         position: relative;
@@ -1376,8 +1450,6 @@ footer {
         font-size: 10px;
     }
 
-
-    /* Hero */
 
     .hero {
         gap: 35px;
@@ -1441,7 +1513,7 @@ footer {
     }
 
 
-    /* General headings */
+    /* Section headings */
 
     .section-heading {
         margin-bottom: 35px;
@@ -1478,12 +1550,14 @@ footer {
     .collection-grid {
         grid-template-columns: 1fr;
 
-        gap: 20px;
+        gap: 18px;
+
+        max-width: 420px;
     }
 
 
     .collection-image {
-        height: 360px;
+        height: 330px;
     }
 
 
@@ -1527,7 +1601,7 @@ footer {
     }
 
 
-    /* Why us */
+    /* Why Us */
 
     .why-us {
         padding:
@@ -1547,7 +1621,7 @@ footer {
     }
 
 
-    /* WhatsApp CTA */
+    /* WhatsApp */
 
     .whatsapp-section {
         padding:
@@ -1601,9 +1675,11 @@ footer {
 
     .floating-whatsapp {
         width: 52px;
+
         height: 52px;
 
         right: 16px;
+
         bottom: 16px;
 
         font-size: 21px;
